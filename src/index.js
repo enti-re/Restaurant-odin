@@ -24,7 +24,6 @@ import Contact from './Contact'
         {
             const navbar = document.createElement("nav")
             navbar.classList.add("navbar")
-            
             const homeButton = tabButton("Home").button
             const MenuButton = tabButton("Menu").button                         // creating Navbar
             const ContactButton = tabButton("Contact").button
@@ -45,18 +44,18 @@ import Contact from './Contact'
         
         const displayWebsite = function()
         {
+            alert("hello");
             const content = defaultElement().content
             const header = Header()        
             const navbar = header.navbar      
-            const mainData = document.createElement("div");             
+            const mainData = document.createElement("div");   
+            mainData.classList.add("main")          
             content.appendChild(header.navbar)
             const buttons = document.querySelectorAll(".btn")
             const home = Home()
-
             home.classList.add(".active")
             mainData.appendChild(home)                      //initializing initial load 
             content.appendChild(mainData)
-
             const menu = Menu()
             const contact = Contact()
             buttons.forEach((btn)=>{
